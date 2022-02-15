@@ -1,0 +1,20 @@
+﻿@model Project_Gremlin.Models.ViewModels.LoreDetailsVM
+<div class="back-image">
+    <input asp-for="@Model.Lore.Id" hidden />
+    <div class="container-fluid title" style="background-image: url('@Url.Content("~/Images/Lore/" + @Model.Lore.ImageTitle)'); background-repeat: no-repeat; background-size: cover; background-position: 50% 30%;">
+        <div class="huge-space"></div>
+        <div class="huge-space"></div>
+        <div class="huge-space"></div>
+        <div class="medium-space"></div>
+        <h1 class="container head-title">Lore: @Model.Lore.Name</h1>
+        <div class="medium-space"></div>
+        <div class="medium-space"></div>
+    </div>
+    <div class="container box-color">
+        <div class="story-body">
+            <hr />
+            <div class="">@Html.Raw(Model.Lore.loreBody)</div>
+            <hr />
+        </div>
+    </div>
+</div>

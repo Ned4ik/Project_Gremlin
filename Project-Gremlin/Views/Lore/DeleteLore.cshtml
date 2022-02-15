@@ -1,0 +1,33 @@
+﻿@model Project_Gremlin.Models.Lore
+<form method="post" asp-controller="Lore" asp-action="DeleteLore" enctype="multipart/form-data">
+    <div class="txt-danger" asp-validation-summary="ModelOnly"></div>
+    <div class="mt-5 d-flex justify-content-center">
+        <div class="p-0 col-9 mb-5 window" style="box-shadow: silver 0px 7px 20px; border-radius: 12.632px;">
+            <div class="d-flex justify-content-start">
+                <img src="/Images/Logo/LogoTransparent.png" class="logo" style="border-top-left-radius:12.632px ;">
+            </div>
+            <div class="body d-flex justify-content-center flex-column mt-4 m-3">
+                <div class=" p-1">
+                    <label style="font-family: Philosopher;">Enter name of lore:</label>
+                    <input asp-for="Name" class="form-control" disabled="disabled" style="background-color: rgb(53, 52, 60); border-color: rgb(53, 52, 60); color: white;" />
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+                <div class="p-1" style="border-radius: 12.632px">
+                    <textarea asp-for="loreBody" class="form-control bg-white"  disabled="disabled" id="summernote"></textarea>
+                    <span class="text-danger" asp-validation-for="loreBody"></span>
+
+                </div>
+                <div class="p-1 position-releative">
+                    <label style="font-family: Philosopher;">Choose photo for title:</label>
+                    <input type="file" name="files" disabled="disabled" id="upload" multiple class="form-control col-3" style="background-color: rgb(53, 52, 60); border-color: rgb(53, 52, 60); color: white;" />
+                    <div class="d-flex justify-content-end button">
+                        <button class="btn btn-primary" type="submit">Delete</button>
+                        <button class="btn  btn-back btn-primary ml-2" asp-action="Index">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</form>

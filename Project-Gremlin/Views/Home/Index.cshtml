@@ -1,0 +1,48 @@
+﻿@model Project_Gremlin.Models.ViewModels.HomeVM
+<link rel="stylesheet" href="~/css/site.css" />
+<div class="container-fluid information-block">
+    <div class="huge-space"></div>
+    <div class="container" style="font-family:Philosopher; color: white;">
+        <h3>Check our characters</h3>
+        <p> We have somethink interesting for you </p>
+        <div class="small-space"></div>
+        <a class="inf-btn" asp-action="Index" asp-controller="Character">Learn more</a>
+    </div>
+    <div class="medium-space"></div>
+</div>
+
+<div class="container mt-3">
+    <div style="font-family: Philosopher; color:white;">
+        <h1>HISTORIES</h1>
+    </div>
+    <div class="row justify-content-center" style="padding-bottom: 100px;">
+        @if (Model.MiniHistories.Count() > 0)
+        {
+            @foreach (var item in Model.MiniHistories)
+            {
+                <partial model="item" name="_miniHistory" />
+            }
+            <partial name="_minihistoryAdd" />
+        }
+        else
+        {
+            <div class="text-center mt-4" style="font-family: Philosopher; color:white;">
+                <h3>History list is empty</h3>
+                <partial name="_minihistoryAdd" />
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container-fluid secondInformation-block">
+    <div class="huge-space"></div>
+    <div class="container text-right" style="font-family:Philosopher; color: white;">
+        <h3>Beautiful Lore</h3>
+        <p>That lore have more history for you</p>
+        <div class="small-space"></div>
+        <a class="inf-btn" asp-action="Index" asp-controller="Lore">Learn more</a>
+    </div>
+    <div class="medium-space"></div>
+    <div class="small-space"></div>
+    <div class="small-space"></div>
+</div>

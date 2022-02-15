@@ -1,0 +1,107 @@
+﻿@model Project_Gremlin.Models.ViewModels.CharacterVM
+<form method="post" asp-controller="Character" asp-action="EditCharacter" enctype="multipart/form-data">
+    <input asp-for="Character.Id" hidden />
+    <div class="txt-danger" asp-validation-summary="ModelOnly"></div>
+    <div class="mt-5 d-flex justify-content-center">
+        <div class="p-0 col-9 mb-5 window" style="box-shadow: silver 0px 7px 20px; border-radius: 12.632px;">
+            <div class="d-flex justify-content-start">
+                <img src="/Images/Logo/LogoTransparent.png" class="logo" style="border-top-left-radius:12.632px ;">
+            </div>
+            <div class="body d-flex justify-content-center flex-column mt-4 m-3">
+                <div class="d-flex justify-content-start">
+                    <div class=" p-1 w-50">
+                        <label style="font-weight: lighter;">Enter name of character</label>
+                        <input asp-for="Character.Name" class="form-control" style="background-color: rgb(53, 52, 60); border-color: rgb(53, 52, 60); color: white;" />
+                        <span class="text-danger" asp-validation-for="Character.Name"></span>
+                    </div>
+                    <div class="p-1 w-50">
+                        <label style="font-weight: lighter;">Enter nickname of character:</label>
+                        <input asp-for="Character.NickName" class="form-control" style="background-color: rgb(53, 52, 60); border-color: rgb(53, 52, 60); color: white;" />
+                        <span class="text-danger" asp-validation-for="Character.NickName"></span>
+                    </div>
+                </div>
+
+                <div class="p-1" style="border-radius: 12.632px">
+                    <textarea asp-for="Character.characterDescription" class="form-control bg-white" placeholder="Enter Description" id="summernote"></textarea>
+                    <span class="text-danger" asp-validation-for="Character.characterDescription"></span>
+                </div>
+                <div class="p-1" style="border-radius: 12.632px">
+                    <textarea asp-for="Character.characterHistory" class="form-control bg-white" placeholder="Enter history" id="summernote-2"></textarea>
+                    <span class="text-danger" asp-validation-for="Character.characterHistory"></span>
+                </div>
+                <div class="p-1 position-releative">
+                    <div class="d-flex justify-content-start">
+                        <div class="w-25">
+                            <label style="font-weight: lighter;">Choose photo for title:</label>
+                            <input type="file" name="files" id="upload" multiple class="form-control" style="background-color: rgb(53, 52, 60); border-color: rgb(53, 52, 60); color: white;" />
+                        </div>
+                        <div class="w-25 ml-3">
+                            <label style="font-weight: lighter;">Choose character photo:</label>
+                            <input type="file" name="secondfiles" id="Secondupload" multiple class="form-control" style="background-color: rgb(53, 52, 60); border-color: rgb(53, 52, 60); color: white;" />
+
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end button">
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn  btn-back btn-primary ml-2">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    <script>
+        $('#summernote').summernote({
+            tabsize: 2,
+            height: 500,
+            emptyPara: '',
+            lang: 'ru-RU',
+            toolbar: [
+                ['fontname', ['fontname']],
+                ['style', ['style']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['height', ['height']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['font', ['strikethrough', 'superscript', 'subscript']],
+                ['insert', ['link', 'picture', 'video']],
+                ['codeview', ['codeview']],
+                ['view', ['fullscreen', 'codeview', 'help']],
+                ['undo', ['undo']],
+                ['redo', ['redo']],
+            ]
+
+        });
+
+        $('#summernote-2').summernote({
+            tabsize: 2,
+            height: 500,
+            emptyPara: '',
+            lang: 'ru-RU',
+            toolbar: [
+                ['fontname', ['fontname']],
+                ['style', ['style']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['height', ['height']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['font', ['strikethrough', 'superscript', 'subscript']],
+                ['insert', ['link', 'picture', 'video']],
+                ['codeview', ['codeview']],
+                ['view', ['fullscreen', 'codeview', 'help']],
+                ['undo', ['undo']],
+                ['redo', ['redo']],
+            ]
+
+        });
+    </script>
+}

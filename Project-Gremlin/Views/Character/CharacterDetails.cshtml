@@ -1,0 +1,40 @@
+﻿@model Project_Gremlin.Models.ViewModels.CharacterDetailsVM
+    <div class="back-image">
+       <div class="container-fluid title" style="background-image: url('@Url.Content("~/Images/Character/" + @Model.Character.imageTitle)');
+     background-repeat: no-repeat; background-size: cover; background-position: 50% 10%;">
+            <img src="">
+            <div class="huge-space"></div>
+            <div class="huge-space"></div>
+            <div class="huge-space"></div>
+            <div class="medium-space"></div>
+            <h1 class="container head-title">Персонаж: @Model.Character.Name</h1>
+            <div class="medium-space"></div>
+            <div class="medium-space"></div>
+        </div>
+        <div class="container box-color">
+            <div class="story-body">
+                <hr />
+                <div class="">
+
+                    <div class="d-flex justify-content-start">
+                        <img src="@ENV.characterPath@Model.Character.characterImage" class="body-image" style="width: 50%; height: 700px;">
+                        <div class="w-50">
+                            <h2 class="text-right"> <span style="font-weight: bolder;">Nickname: @Model.Character.NickName</span></h2>
+                            <h3 class="text-center mt-5"><span style="font-weight: bolder;">Character Description</span></h3>
+                            <div class="p-4">
+                               @Html.Raw(@Model.Character.characterDescription)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-4">
+                        <h2><span style="font-weight: bolder;">About Character</span></h2>
+                        <div class="mt-4">
+                            @Html.Raw(@Model.Character.characterHistory)
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+            </div>
+        </div>
+    </div>

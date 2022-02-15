@@ -1,0 +1,262 @@
+﻿/*Nanbar*/
+.nav-options {
+    font-family: Philosopher;
+    border-bottom: solid 1px gray;
+    position: fixed top;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+}
+
+/*Footer*/
+footer {
+    width: 100%;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    font-family: Philosopher;
+    position: absolute;
+    bottom: 0;
+
+}
+
+
+.logo {
+    height: 100px;
+    width: 400px;
+}
+
+.card {
+    background-color: rgb(53, 52, 60);
+    border: solid 3px gray;
+    height: 250px;
+    width: 190px;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: 0.1s linear;
+}
+
+.card-text {
+    position: absolute;
+    top: 250px;
+    left: -2px;
+    color: white;
+    font-family: Philosopher;
+    width: 190px;
+    text-align: center;
+}
+
+.add-icon {
+    color: gray;
+    font-size: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.card-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12.632px;
+}
+
+.input:focus {
+    border: 3px solid red;
+}
+
+#box {
+    position: relative;
+}
+
+#box2 {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    opacity: 0;
+}
+
+#box2:hover {
+    opacity: 1;
+    transition: 1s linear;
+}
+
+.button {
+    margin-top: -40px;
+}
+
+.window {
+    background-color: rgb(43, 42, 50);
+    min-width: 400px;
+}
+
+label {
+    color: white;
+}
+
+.form-control:focus {
+    border-color: white;
+    box-shadow: 0 0 0 0.1rem rgba(177, 184, 178, 0.637);
+}
+
+.btn:focus {
+    border-color: white;
+    box-shadow: 0 0 0 0.1rem rgba(177, 184, 178, 0.637);
+}
+
+.btn-primary {
+    color: white !important;
+    background-color: rgb(52, 53, 60) !important;
+    border-color: rgba(177, 184, 178, 0.637) !important;
+    font-family: Philosopher;
+}
+
+.btn-primary:hover {
+    background-color: gray !important;
+}
+
+
+/* details options */
+
+.head-title {
+    color: rgb(175,165,155); 
+    color: white;
+    height: 50px;
+    font-family: Philosopher;
+}
+
+.title {
+    width: 100%;
+    border-bottom: gray solid 3px;
+}
+
+.photo-title {
+    width: 100%;
+    height: 100%;
+}
+
+.story-body {
+    color: rgb(175,165,155);
+    margin-top: 80px;
+    font-family: Philosopher;
+    padding-bottom:30px;
+}
+
+hr {
+    background-color: rgb(175,165,155);
+    width: 75%;
+    box-shadow: rgb(175,165,155) 0px 1px 10px;
+}
+
+.box-color {
+    /* background-color: rgb(52, 53, 60); */
+}
+
+.huge-space {
+    height: 200px;
+}
+
+.medium-space {
+    height: 50px;
+}
+
+.back-image {
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+}
+
+/* Edit Delete Buttons */
+
+.delete-btn {
+    font-size: 30px;
+}
+
+.edit-btn {
+    font-size: 25px;
+}
+
+.btn-box {
+    color:white;
+   /* color: rgb(175,165,155);*/
+    position: absolute;
+}
+
+.btn-box-delete {
+    color: gray;
+    left: 170px;
+    top: -12px;
+}
+
+.btn-box-edit {
+    color: gray;
+    top: -10px;
+    left: -10px;
+}
+
+.btn-box-delete:hover {
+    color: red ;
+}
+
+.btn-box-edit:hover {
+    color: blue;
+}
+
+/*Character Details*/
+.body-image {
+    width: 50%;
+    height: 700px;
+}
+
+
+/*Links*/
+
+inf-link {
+    color: white !important;
+    background-color: #2d3436 !important;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%) !important;
+}
+
+.inf-icon {
+    font-size: 30px;
+    padding: 5px;
+}
+
+.link{
+    color:white;
+}
+.link:hover{
+    color: gray;
+}
+
+/*Information Block*/
+
+.information-block {
+    background-image: url(/Images/HomeImage/Character.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-size: cover;
+}
+.secondInformation-block {
+    background-image: url(/Images/HomeImage/Khell1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 70%;
+    background-size: cover;
+}
+.inf-btn {
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 12.632px;
+    color:white;
+    text-decoration:none;
+}
+.inf-btn:hover {
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+}
+.small-space {
+    height: 20px;
+}

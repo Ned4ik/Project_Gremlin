@@ -1,0 +1,25 @@
+﻿<div class=" ml-4 mt-5">
+
+    <div class="card ml-2" style="border-radius: 12.632px; ">
+        <div>
+            <div class="btn-box btn-box-delete">
+                <a asp-action="DeleteLore" asp-route-id="@Model.Id" class="btn-box-delete">
+                    <i class="far fa-times-circle delete-btn"></i>
+                </a>
+            </div>
+            <div class="btn-box btn-box-edit">
+                <a asp-action="EditLore" asp-route-id="@Model.Id" class="btn-box-edit">
+                    <i class="fas fa-pen edit-btn"></i>
+                </a>
+            </div>
+        </div>
+        <a asp-action="LoreDetails" asp-route-id="@Model.Id" style="width: 100%; height:100%;">
+            <img src="@ENV.LorePath@Model.ImageTitle" class="card-image" alt="">
+        </a>
+        <div class="card-text">
+            <p>@Model.Name</p>
+        </div>
+    </div>
+
+
+</div>

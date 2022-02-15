@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Project_Gremlin</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/summernote/summernote.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/Options.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Griffy&family=Henny+Penny&family=Philosopher&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark box-shadow nav-options">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Project Gremlin</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Character" asp-action="Index">Characters</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Lore" asp-action="Index">Lore</a>
+                        </li>
+                        @*<li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="About" asp-action="Index">About</a>
+                        </li>*@
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer text-muted m-0">
+        <partial name="_links" />
+        <div class="container-fluid text-center" style="border-top:1px solid gray; height:50px; color:white;">
+            Project Gremlin - 2021&copy;
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="/summernote/summernote.js"></script>
+    <script src="~/summernote/lang/summernote-ru-RU.js"></script>
+    <script src="/fontawesome-free-5.15.4-web/js/all.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

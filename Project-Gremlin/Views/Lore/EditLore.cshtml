@@ -1,0 +1,66 @@
+﻿@model Project_Gremlin.Models.ViewModels.LoreVM
+
+<form method="post" asp-controller="Lore" asp-action="EditLore" enctype="multipart/form-data">
+    <input asp-for="Lore.Id" hidden />
+    <div class="txt-danger" asp-validation-summary="ModelOnly"></div>
+    <div class="mt-5 d-flex justify-content-center">
+        <div class="p-0 col-9 mb-5 window" style="box-shadow: silver 0px 7px 20px; border-radius: 12.632px;">
+            <div class="d-flex justify-content-start">
+                <img src="/Images/Logo/LogoTransparent.png" class="logo" style="border-top-left-radius:12.632px ;">
+            </div>
+            <div class="body d-flex justify-content-center flex-column mt-4 m-3">
+                <div class=" p-1">
+                    <label style="font-family: Philosopher;">Enter name of lore:</label>
+                    <input asp-for="Lore.Name" class="form-control" style="background-color: rgb(53, 52, 60); border-color: rgb(53, 52, 60); color: white;" />
+                    <span class="text-danger" asp-validation-for="Lore.Name"></span>
+                </div>
+                <div class="p-1" style="border-radius: 12.632px">
+                    <textarea asp-for="Lore.loreBody" class="form-control bg-white" id="summernote"></textarea>
+                    <span class="text-danger" asp-validation-for="Lore.loreBody"></span>
+
+                </div>
+                <div class="p-1 position-releative">
+                    <label style="font-family: Philosopher;">Choose photo for title:</label>
+                    <input type="file" name="files" id="upload" multiple class="form-control col-3" style="background-color: rgb(53, 52, 60); border-color: rgb(53, 52, 60); color: white;" />
+                    <div class="d-flex justify-content-end button">
+                        <button class="btn btn-primary" type="submit">Edit</button>
+                        <button class="btn  btn-back btn-primary ml-2" asp-action="Index">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    <script>
+        $('#summernote').summernote({
+            tabsize: 2,
+            height: 500,
+            emptyPara: '',
+            lang: 'ru-RU',
+            toolbar: [
+                ['fontname', ['fontname']],
+                ['style', ['style']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['height', ['height']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['font', ['strikethrough', 'superscript', 'subscript']],
+                ['insert', ['link', 'picture', 'video']],
+                ['codeview', ['codeview']],
+                ['view', ['fullscreen', 'codeview', 'help']],
+                ['undo', ['undo']],
+                ['redo', ['redo']],
+            ]
+
+        });
+    </script>
+}

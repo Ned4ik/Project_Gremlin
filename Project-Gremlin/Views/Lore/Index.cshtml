@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Project_Gremlin.Models.Lore>
+<div class="container">
+    <div style="font-family: Philosopher; color:white;">
+        <h1>Lore</h1>
+    </div>
+    <div class="row justify-content-center" style="padding-bottom: 100px;">
+        @if (Model.Count() > 0)
+        {
+            @foreach (var item in Model)
+            {
+                <partial model="item" name="_loreCard" />
+            }
+            <partial name="_loreAdd" />
+        }
+        else
+        {
+            <div class="text-center mt-4" style="font-family: Philosopher; color:white;">
+                <h3>Lore list is empty</h3>
+                <partial name="_loreAdd" />
+            </div>
+        }
+    </div>
+
+</div>
